@@ -13,6 +13,8 @@ gerby = Hamster.create(name: "ger", username: "gerbygerr")
 Category.destroy_all
 winter = Category.create(category_name: "Winter Gear")
 fashion = Category.create(category_name: "Fashion")
+workout = Category.create(category_name: "Workout Equipment")
+entertainment = Category.create(category_name: "Entertainment")
 
 
 SubCategory.destroy_all
@@ -23,30 +25,96 @@ pads = SubCategory.create(name: "Heating Pads", img_url: "https://images-na.ssl-
 
 hats = SubCategory.create(name: "Hats", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: fashion.id)
 costume = SubCategory.create(name: "Costumes", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: fashion.id)
+dresses = SubCategory.create(name: "Hamster Dresses", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: fashion.id)
+shirts = SubCategory.create(name: "Hamster Shirts", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: fashion.id)
+
+balls = SubCategory.create(name: "Ball Runners", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: workout.id)
+wheels = SubCategory.create(name: "Wheels", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: workout.id)
+weights = SubCategory.create(name: "Weights", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: workout.id)
+stairs = SubCategory.create(name: "Stairs", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: workout.id)
+
+swings = SubCategory.create(name: "Hamster Swings", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: entertainment.id)
+playhouse = SubCategory.create(name: "Hamster Play House", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: entertainment.id)
+donuts = SubCategory.create(name: "Donuts", img_url: "https://images-na.ssl-images-amazon.com/images/I/717HTyceK3L._SL1500_.jpg", category_id: entertainment.id)
+
 
 Item.destroy_all
-Item.create(name: "Green Crocodile Mini Home", img_url: "https://images-na.ssl-images-amazon.com/images/I/718PwlKHqsL._SL1100_.jpg", price: 14.99, sub_category_id: mini_homes.id)
-Item.create(name: "Pink Pig Mini Home", img_url: "https://images-na.ssl-images-amazon.com/images/I/610U1SegnFL._SL1100_.jpg", price: 14.99, sub_category_id: mini_homes.id)
-Item.create(name: "Green Crocodile Mini Home", img_url: "https://images-na.ssl-images-amazon.com/images/I/718PwlKHqsL._SL1100_.jpg", price: 14.99, sub_category_id: mini_homes.id)
-Item.create(name: "Pink Pig Mini Home", img_url: "https://images-na.ssl-images-amazon.com/images/I/610U1SegnFL._SL1100_.jpg", price: 14.99, sub_category_id: mini_homes.id)
 
-Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: hammocks.id)
-Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: hammocks.id)
-Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: hammocks.id)
-Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: hammocks.id)
+# winter gear
+Item.create(name: "Green Crocodile", img_url: "https://images-na.ssl-images-amazon.com/images/I/718PwlKHqsL._SL1100_.jpg", price: rand.round(2)*100, sub_category_id: mini_homes.id)
+Item.create(name: "Pink Pig", img_url: "https://images-na.ssl-images-amazon.com/images/I/610U1SegnFL._SL1100_.jpg", price: rand.round(2)*100, sub_category_id: mini_homes.id)
+Item.create(name: "Green Crocodile", img_url: "https://images-na.ssl-images-amazon.com/images/I/718PwlKHqsL._SL1100_.jpg", price: rand.round(2)*100, sub_category_id: mini_homes.id)
+Item.create(name: "Pink Pig", img_url: "https://images-na.ssl-images-amazon.com/images/I/610U1SegnFL._SL1100_.jpg", price: rand.round(2)*100, sub_category_id: mini_homes.id)
 
-Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: winter_hats.id)
-Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: winter_hats.id)
-Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: winter_hats.id)
-Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: winter_hats.id)
+Item.create(name: "Banana Hammock", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hammocks.id)
+Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hammocks.id)
+Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hammocks.id)
+Item.create(name: "Banana Hammock Hamster House", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hammocks.id)
 
-Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: pads.id)
-Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: pads.id)
-Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: pads.id)
-Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.79, sub_category_id: pads.id)
+Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: winter_hats.id)
+Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: winter_hats.id)
+Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: winter_hats.id)
+Item.create(name: "WinterHatItem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: winter_hats.id)
 
-Item.create(name: "hatitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.73, sub_category_id: hats.id)
-Item.create(name: "hatitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.72, sub_category_id: hats.id)
+Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: pads.id)
+Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: pads.id)
+Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: pads.id)
+Item.create(name: "padsitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: pads.id)
 
-Item.create(name: "costumeitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.72, sub_category_id: costume.id)
-Item.create(name: "costumeitem", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: 7.72, sub_category_id: costume.id)
+# fashion
+Item.create(name: "hat 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hats.id)
+Item.create(name: "hat 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hats.id)
+Item.create(name: "hat 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hats.id)
+Item.create(name: "hat 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: hats.id)
+
+Item.create(name: "costume 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: costume.id)
+Item.create(name: "costume 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: costume.id)
+Item.create(name: "costume 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: costume.id)
+Item.create(name: "costume 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: costume.id)
+
+Item.create(name: "dresses 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: dresses.id)
+Item.create(name: "dresses 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: dresses.id)
+Item.create(name: "dresses 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: dresses.id)
+Item.create(name: "dresses 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: dresses.id)
+
+Item.create(name: "shirt 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: shirts.id)
+Item.create(name: "shirt 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: shirts.id)
+Item.create(name: "shirt 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: shirts.id)
+Item.create(name: "shirt 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: shirts.id)
+
+# workout
+Item.create(name: "ball 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: balls.id)
+Item.create(name: "ball 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: balls.id)
+Item.create(name: "ball 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: balls.id)
+Item.create(name: "ball 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: balls.id)
+
+Item.create(name: "wheel 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: wheels.id)
+Item.create(name: "wheel 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: wheels.id)
+Item.create(name: "wheel 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: wheels.id)
+Item.create(name: "wheel 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: wheels.id)
+
+Item.create(name: "weight 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: weights.id)
+Item.create(name: "weight 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: weights.id)
+Item.create(name: "weight 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: weights.id)
+Item.create(name: "weight 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: weights.id)
+
+Item.create(name: "stairs 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: stairs.id)
+Item.create(name: "stairs 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: stairs.id)
+Item.create(name: "stairs 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: stairs.id)
+Item.create(name: "stairs 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: stairs.id)
+
+# entertainment
+Item.create(name: "swing 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: swings.id)
+Item.create(name: "swing 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: swings.id)
+Item.create(name: "swing 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: swings.id)
+Item.create(name: "swing 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: swings.id)
+
+Item.create(name: "playhouse 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: playhouse.id)
+Item.create(name: "playhouse 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: playhouse.id)
+Item.create(name: "playhouse 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: playhouse.id)
+Item.create(name: "playhouse 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: playhouse.id)
+
+Item.create(name: "donut 1", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: donuts.id)
+Item.create(name: "donut 2", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: donuts.id)
+Item.create(name: "donut 3", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: donuts.id)
+Item.create(name: "donut 4", img_url: "https://images-na.ssl-images-amazon.com/images/I/61cLA0mY0-L._SL1000_.jpg", price: rand.round(2)*10, sub_category_id: donuts.id)
