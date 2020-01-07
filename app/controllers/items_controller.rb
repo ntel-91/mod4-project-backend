@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
     end
 
     def newpurchase
-      updated = []
+      # updated = []
       
       params[:cart].each do |item| 
         item_to_update = Item.find{|i| i.id == item["id"]}
@@ -15,7 +15,6 @@ class ItemsController < ApplicationController
       end
 
       categories = Category.all
-      # returnUpdated = [categories, updated]
 
       render json: categories
     end
