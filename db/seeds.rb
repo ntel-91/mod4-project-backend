@@ -21,14 +21,15 @@ Category.destroy_all
 SubCategory.destroy_all
 Item.destroy_all
 
-10.times do
+6.times do
     category = Category.create(category_name: Faker::Commerce.department(max: 1))
 
-    6.times do
+    5.times do
         sub_cat = SubCategory.create(name: "#{category.category_name} - #{Faker::Types.rb_string}", img_url: "", category_id: category.id)
 
-        16.times do
-            Item.create(name: Faker::Commerce.product_name, img_url: Faker::LoremFlickr.image(size: "50x60"), price: Faker::Commerce.price, sub_category_id: sub_cat.id)
+        5.times do
+            product = Faker::Commerce.product_name
+            Item.create(name: product, img_url: Faker::LoremFlickr.image(size: "100x100", search_terms: [product]), price: Faker::Commerce.price, sub_category_id: sub_cat.id)
         end
     end
 
